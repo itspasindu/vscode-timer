@@ -1,0 +1,51 @@
+{
+  "name": "coding-timer",
+  "displayName": "Coding Timer",
+  "description": "Manage your coding time with start, pause, and stop buttons",
+  "icon": "images/logo.png",
+  "version": "1.0.0",
+  "publisher": "pasindu-dewviman",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+  "activationEvents": ["*"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codingTimer.start",
+        "title": "Start Timer"
+      },
+      {
+        "command": "codingTimer.pause",
+        "title": "Pause Timer"
+      },
+      {
+        "command": "codingTimer.stop",
+        "title": "Stop Timer"
+      },
+      {
+        "command": "codingTimer.dailyReport",
+        "title": "Get Daily Coding Report"
+      },
+      {
+        "command": "codingTimer.weeklyReport",
+        "title": "Get Weekly Coding Report"
+      },
+      {
+        "command": "codingTimer.monthlyReport",
+        "title": "Get Monthly Coding Report"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.4.3",
+    "ts-loader": "^9.2.5"
+  }
+}
